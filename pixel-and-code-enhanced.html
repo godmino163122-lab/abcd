@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel & Code | High-Converting Websites for Local Businesses</title>
+    <meta name="description" content="Pixel & Code builds fast, modern, mobile-first websites for local businesses across Gujarat and India. Get a free preview on WhatsApp.">
+    <meta name="theme-color" content="#0B0F19">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1E293B', 900: '#0F172A', 950: '#0B0F19' },
+                        electric: '#2563EB',
+                        emeraldAcc: '#10B981',
+                        darkCard: '#1E293B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-4px);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.2);
+        }
+    
+        html { scroll-padding-top: 90px; }
+        ::selection { background: rgba(37,99,235,.45); color: white; }
+        .gradient-text {
+            background: linear-gradient(90deg,#fff,#93c5fd,#34d399);
+            -webkit-background-clip:text; background-clip:text; color:transparent;
+        }
+        .section-grid {
+            background-image: linear-gradient(rgba(148,163,184,.045) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(148,163,184,.045) 1px, transparent 1px);
+            background-size: 38px 38px;
+        }
+        .glow-orb { animation: floatOrb 8s ease-in-out infinite; }
+        @keyframes floatOrb { 0%,100%{transform:translate3d(0,0,0)} 50%{transform:translate3d(0,-18px,0)} }
+        .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
+        .reveal.show { opacity:1; transform:none; }
+        .mobile-nav-item {
+            display:flex; flex-direction:column; align-items:center; gap:3px;
+            padding:7px 3px; border-radius:10px; color:#94a3b8; font-size:10px;
+        }
+        .mobile-nav-item i { font-size:15px; }
+        .mobile-nav-item:hover,.mobile-nav-item:focus { color:#34d399; background:rgba(16,185,129,.08); }
+        .faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease, opacity .25s ease; opacity:0; }
+        .faq-item.open .faq-answer { max-height:220px; opacity:1; }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-icon { transition:transform .25s ease; }
+        .pricing-card { transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+        .pricing-card:hover { transform:translateY(-8px); }
+        .shine { position:relative; overflow:hidden; }
+        .shine:after {
+            content:""; position:absolute; top:-120%; left:-80%; width:55%; height:320%;
+            background:linear-gradient(90deg,transparent,rgba(255,255,255,.10),transparent);
+            transform:rotate(20deg); transition:left .7s ease;
+        }
+        .shine:hover:after { left:140%; }
+        @media (prefers-reduced-motion:reduce) {
+            *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; }
+        }
+
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 flex flex-col min-h-screen pb-16 md:pb-0">
+    <!-- Reading progress -->
+    <div id="scrollProgress" class="fixed top-0 left-0 z-[70] h-1 bg-gradient-to-r from-electric via-blue-400 to-emeraldAcc transition-all duration-100" style="width:0%"></div>
+
+    <!-- Mobile bottom navigation -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-card border-t border-slate-700/70 px-2 py-2">
+        <div class="grid grid-cols-4 gap-1">
+            <a href="#home" class="mobile-nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+            <a href="#packages" class="mobile-nav-item"><i class="fa-solid fa-tags"></i><span>Pricing</span></a>
+            <a href="#demos" class="mobile-nav-item"><i class="fa-solid fa-laptop-code"></i><span>Demos</span></a>
+            <a href="#contact" class="mobile-nav-item"><i class="fa-brands fa-whatsapp"></i><span>Contact</span></a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 w-full glass-card border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-electric to-emeraldAcc flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-electric/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-mono">&lt;/&gt;</i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Pixel & Code</span>
+                    <span class="block text-[10px] uppercase tracking-widest text-emeraldAcc font-semibold">Custom Websites</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-electric transition-colors">Home</a>
+                <a href="#why-us" class="hover:text-electric transition-colors">Why Us</a>
+                <a href="#services" class="hover:text-electric transition-colors">Services</a>
+                <a href="#process" class="hover:text-electric transition-colors">Process</a>
+                <a href="#packages" class="hover:text-electric transition-colors">Packages</a>
+                <a href="#demos" class="hover:text-electric transition-colors">Live Demos</a>
+                <a href="#contact" class="hover:text-electric transition-colors">Contact</a>
+                <a href="#faq" class="hover:text-electric transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Direct Contact CTA -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/917878224004" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emeraldAcc/10 border border-emeraldAcc/30 text-emeraldAcc font-medium text-sm hover:bg-emeraldAcc hover:text-navy-950 transition-all duration-200 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">+91 7878224004</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-12 pb-20 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-b from-navy-900 to-navy-950">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-electric/15 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute top-1/3 right-10 w-72 h-72 bg-emeraldAcc/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emeraldAcc animate-pulse"></span>
+                    <span>Fast 3–7 Day Delivery Across Gujarat & India</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight sm:leading-none">
+                    Websites That Bring <span class="bg-gradient-to-r from-electric via-blue-400 to-emeraldAcc bg-clip-text text-transparent">Real Customers</span> To Your Business
+                </h1>
+
+                <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+                    We build fast, high-converting, mobile-friendly websites for local shops, cafes, clinics, salons, and gyms across Gujarat & India.
+                </p>
+
+                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emeraldAcc to-emerald-600 text-slate-950 font-bold text-base shadow-lg shadow-emeraldAcc/20 hover:shadow-emeraldAcc/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Get Free WhatsApp Demo
+                    </a>
+                    <a href="#packages" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-white font-semibold text-base border border-slate-700 transition-all flex items-center justify-center gap-2">
+                        Explore Packages & Pricing
+                        <i class="fa-solid fa-arrow-right text-sm text-slate-400"></i>
+                    </a>
+                </div>
+
+                <div class="mt-14 pt-8 border-t border-slate-800/60 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 text-slate-300">
+                    <div class="glass-card p-4 rounded-xl flex items-center justify-center gap-3">
+                        <span class="text-xl">⚡</span>
+                        <div class="text-left">
+                            <div class="font-bold text-white text-sm">3–7 Day Delivery</div>
+                            <div class="text-xs text-slate-400">Rapid Turnaround Time</div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl flex items-center justify-center gap-3">
+                        <span class="text-xl">📱</span>
+                        <div class="text-left">
+                            <div class="font-bold text-white text-sm">100% Mobile Optimized</div>
+                            <div class="text-xs text-slate-400">Flawless on All Screens</div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl flex items-center justify-center gap-3">
+                        <span class="text-xl">💬</span>
+                        <div class="text-left">
+                            <div class="font-bold text-white text-sm">WhatsApp Integration</div>
+                            <div class="text-xs text-slate-400">Direct Instant Leads</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-400">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-emeraldAcc"></i> No hidden charges</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-bolt text-electric"></i> Fast loading</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-mobile-screen-button text-blue-400"></i> Mobile-first</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-headset text-emeraldAcc"></i> Human support</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 bg-navy-900/60 border-y border-slate-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">Our Advantage</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Why Local Businesses Trust Us</p>
+                    <p class="mt-3 text-slate-400 text-sm">Engineered for real growth, speed, and seamless lead generation.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-electric/20 text-electric flex items-center justify-center text-xl mb-4 font-bold">⚡</div>
+                        <h3 class="text-lg font-bold text-white">Fast Turnaround</h3>
+                        <p class="mt-2 text-slate-400 text-xs leading-relaxed">Your website goes live in 3 to 7 working days with fast turnaround and continuous progress updates.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-emeraldAcc/20 text-emeraldAcc flex items-center justify-center text-xl mb-4 font-bold">💰</div>
+                        <h3 class="text-lg font-bold text-white">Transparent Pricing</h3>
+                        <p class="mt-2 text-slate-400 text-xs leading-relaxed">Fixed affordable rates with zero hidden charges or surprise renewal fees down the line.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-electric/20 text-electric flex items-center justify-center text-xl mb-4 font-bold">💬</div>
+                        <h3 class="text-lg font-bold text-white">WhatsApp First</h3>
+                        <p class="mt-2 text-slate-400 text-xs leading-relaxed">Convert website visitors straight into direct WhatsApp chats and customer leads instantly.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-emeraldAcc/20 text-emeraldAcc flex items-center justify-center text-xl mb-4 font-bold">🛠️</div>
+                        <h3 class="text-lg font-bold text-white">Ongoing Support</h3>
+                        <p class="mt-2 text-slate-400 text-xs leading-relaxed">Monthly care, security updates, and maintenance so you can focus entirely on running your business.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Results / capability strip -->
+        <section class="py-10 bg-navy-950 section-grid border-b border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+                    <div class="glass-card rounded-2xl p-5 text-center">
+                        <div class="text-3xl font-black gradient-text">100%</div>
+                        <div class="text-xs text-slate-400 mt-1">Mobile Responsive</div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-5 text-center">
+                        <div class="text-3xl font-black gradient-text">3–7</div>
+                        <div class="text-xs text-slate-400 mt-1">Typical Delivery Days</div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-5 text-center">
+                        <div class="text-3xl font-black gradient-text">24/7</div>
+                        <div class="text-xs text-slate-400 mt-1">Website Availability</div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-5 text-center">
+                        <div class="text-3xl font-black gradient-text">1:1</div>
+                        <div class="text-xs text-slate-400 mt-1">Direct Client Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What we build -->
+        <section id="services" class="py-20 bg-navy-950 section-grid">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">What We Build</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">A Website Should Do More Than Look Good</p>
+                    <p class="mt-3 text-slate-400 text-sm">Every page is designed around one goal: making it easier for the right customer to take action.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-card glass-card-hover rounded-2xl p-6 reveal">
+                        <div class="w-12 h-12 rounded-xl bg-electric/15 text-electric flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3 class="text-lg font-bold text-white">Lead Generation Websites</h3>
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">Clear calls-to-action, WhatsApp buttons, inquiry forms and conversion-focused layouts that guide visitors.</p>
+                    </div>
+                    <div class="glass-card glass-card-hover rounded-2xl p-6 reveal">
+                        <div class="w-12 h-12 rounded-xl bg-emeraldAcc/15 text-emeraldAcc flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <h3 class="text-lg font-bold text-white">Online Stores</h3>
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">Product pages, categories, carts, checkout flows and payment-ready foundations for growing brands.</p>
+                    </div>
+                    <div class="glass-card glass-card-hover rounded-2xl p-6 reveal">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-calendar-check"></i></div>
+                        <h3 class="text-lg font-bold text-white">Booking & Appointment Sites</h3>
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">Perfect for salons, clinics, consultants, tutors and fitness businesses that need inquiries and bookings.</p>
+                    </div>
+                    <div class="glass-card glass-card-hover rounded-2xl p-6 reveal">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-building"></i></div>
+                        <h3 class="text-lg font-bold text-white">Business & Company Sites</h3>
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">Professional pages for services, teams, portfolios, case studies, locations and contact information.</p>
+                    </div>
+                    <div class="glass-card glass-card-hover rounded-2xl p-6 reveal">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-rocket"></i></div>
+                        <h3 class="text-lg font-bold text-white">Landing Pages</h3>
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">Focused pages for ads, campaigns, new launches, special offers and lead collection.</p>
+                    </div>
+                    <div class="glass-card glass-card-hover rounded-2xl p-6 reveal">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/15 text-rose-400 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="text-lg font-bold text-white">Custom Web Apps</h3>
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">Dashboards, portals, calculators and custom workflows for businesses with more complex requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="py-20 bg-navy-900/60 border-y border-slate-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">Simple Process</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">From Idea to Live Website</p>
+                    <p class="mt-3 text-slate-400 text-sm">No mysterious agency rituals. Just a straightforward workflow.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="relative glass-card rounded-2xl p-6 reveal">
+                        <span class="text-5xl font-black text-slate-800 absolute top-3 right-5">01</span>
+                        <i class="fa-solid fa-comments text-emeraldAcc text-2xl"></i>
+                        <h3 class="font-bold text-white mt-5">Tell Us Your Goal</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Share your business, services, audience, references and what you want customers to do.</p>
+                    </div>
+                    <div class="relative glass-card rounded-2xl p-6 reveal">
+                        <span class="text-5xl font-black text-slate-800 absolute top-3 right-5">02</span>
+                        <i class="fa-solid fa-pen-ruler text-electric text-2xl"></i>
+                        <h3 class="font-bold text-white mt-5">Design & Build</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">We create the structure, visual style, copy sections and mobile experience around your goal.</p>
+                    </div>
+                    <div class="relative glass-card rounded-2xl p-6 reveal">
+                        <span class="text-5xl font-black text-slate-800 absolute top-3 right-5">03</span>
+                        <i class="fa-solid fa-circle-check text-emeraldAcc text-2xl"></i>
+                        <h3 class="font-bold text-white mt-5">Review & Refine</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">You review the website, request included revisions and approve the final version.</p>
+                    </div>
+                    <div class="relative glass-card rounded-2xl p-6 reveal">
+                        <span class="text-5xl font-black text-slate-800 absolute top-3 right-5">04</span>
+                        <i class="fa-solid fa-globe text-electric text-2xl"></i>
+                        <h3 class="font-bold text-white mt-5">Launch</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">We prepare the final website for your domain/hosting and help you get it online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries -->
+        <section class="py-20 bg-navy-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 reveal">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">Built For Local Business</h2>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-white">One Team. Many Industries.</p>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-xl">From a neighbourhood café to a growing service brand, the website structure can be adapted to the business instead of forcing every client into the same template.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">🍽️</div><div class="text-xs text-slate-300 mt-2">Cafes</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">🩺</div><div class="text-xs text-slate-300 mt-2">Clinics</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">💈</div><div class="text-xs text-slate-300 mt-2">Salons</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">🏋️</div><div class="text-xs text-slate-300 mt-2">Gyms</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">📚</div><div class="text-xs text-slate-300 mt-2">Coaching</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">🏠</div><div class="text-xs text-slate-300 mt-2">Real Estate</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">🛍️</div><div class="text-xs text-slate-300 mt-2">Retail</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">⚖️</div><div class="text-xs text-slate-300 mt-2">Consultants</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">🚗</div><div class="text-xs text-slate-300 mt-2">Auto</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">📸</div><div class="text-xs text-slate-300 mt-2">Creators</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">🏢</div><div class="text-xs text-slate-300 mt-2">Companies</div></div>
+                    <div class="glass-card rounded-xl p-4 text-center"><div class="text-2xl">➕</div><div class="text-xs text-slate-300 mt-2">And More</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Packages Section -->
+        <section id="packages" class="py-20 bg-navy-950 relative border-b border-slate-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">Transparent Pricing</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Choose The Right Package For Your Business</p>
+                    <p class="mt-3 text-slate-400 text-sm">Zero hidden charges. Complete clarity from day one.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 items-stretch">
+                    <!-- Starter -->
+                    <div class="glass-card pricing-card shine glass-card-hover rounded-2xl p-6 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-slate-400 font-semibold text-sm">Starter Website</div>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-white">₹4,999</span>
+                                <span class="text-slate-400 text-xs">– ₹7,999</span>
+                            </div>
+                            <p class="mt-2 text-xs text-slate-400">Micro-businesses & single service pros</p>
+                            <hr class="my-6 border-slate-800">
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> 1–3 Mobile Pages</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> WhatsApp & Google Maps</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Basic Local SEO</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> 3 Days Turnaround</li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('Starter Website (₹4,999 – ₹7,999)')" 
+                                class="mt-8 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white font-semibold text-xs transition-colors border border-slate-700 hover:border-electric">
+                            Choose Starter
+                        </button>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="glass-card pricing-card shine rounded-2xl p-6 flex flex-col justify-between relative border-2 border-electric bg-slate-800/90 shadow-2xl shadow-electric/10">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-electric to-emeraldAcc text-white font-bold text-[10px] px-3 py-0.5 rounded-full uppercase tracking-wider shadow-lg">
+                            Most Popular
+                        </div>
+                        <div>
+                            <div class="text-electric font-semibold text-sm">Business Website</div>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-white">₹9,999</span>
+                                <span class="text-slate-400 text-xs">– ₹17,999</span>
+                            </div>
+                            <p class="mt-2 text-xs text-slate-300">Cafes, clinics, gyms & salons</p>
+                            <hr class="my-6 border-slate-700">
+                            <ul class="space-y-3 text-xs text-slate-200">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> 5–8 Custom Pages</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Inquiry Forms & Gallery</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Google Analytics Setup</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> 2 Revision Rounds</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> 5 Days Turnaround</li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('Business Website (₹9,999 – ₹17,999)')" 
+                                class="mt-8 w-full py-3 px-4 rounded-xl bg-electric hover:bg-blue-600 text-white font-bold text-xs shadow-lg shadow-electric/30 transition-all">
+                            Choose Business
+                        </button>
+                    </div>
+
+                    <!-- Professional Custom -->
+                    <div class="glass-card pricing-card shine glass-card-hover rounded-2xl p-6 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-slate-400 font-semibold text-sm">Professional Custom</div>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-white">₹20,000</span>
+                                <span class="text-slate-400 text-xs">– ₹40,000+</span>
+                            </div>
+                            <p class="mt-2 text-xs text-slate-400">High-converting leads & brand funnels</p>
+                            <hr class="my-6 border-slate-800">
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Advanced Custom UI/UX</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Custom Lead Funnel</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Dynamic Blog & Portfolio</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Priority Support</li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('Professional Custom (₹20,000 – ₹40,000+)')" 
+                                class="mt-8 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white font-semibold text-xs transition-colors border border-slate-700 hover:border-electric">
+                            Choose Pro
+                        </button>
+                    </div>
+
+                    <!-- E-Commerce -->
+                    <div class="glass-card pricing-card shine glass-card-hover rounded-2xl p-6 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-slate-400 font-semibold text-sm">E-Commerce Store</div>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-white">₹30,000</span>
+                                <span class="text-slate-400 text-xs">– ₹75,000+</span>
+                            </div>
+                            <p class="mt-2 text-xs text-slate-400">Online retail & payment gateway</p>
+                            <hr class="my-6 border-slate-800">
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Full Product Catalog</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Payment Integration</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Order & Shipping Setup</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Automated Email Alerts</li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('E-Commerce Store (₹30,000 – ₹75,000+)')" 
+                                class="mt-8 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white font-semibold text-xs transition-colors border border-slate-700 hover:border-electric">
+                            Choose E-Com
+                        </button>
+                    </div>
+
+                    <!-- Web Apps -->
+                    <div class="glass-card pricing-card shine glass-card-hover rounded-2xl p-6 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-slate-400 font-semibold text-sm">Custom Web Apps</div>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-extrabold text-white">₹50,000</span>
+                                <span class="text-slate-400 text-xs">+</span>
+                            </div>
+                            <p class="mt-2 text-xs text-slate-400">Complex web logic & client portals</p>
+                            <hr class="my-6 border-slate-800">
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Custom Dashboards</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Database & CRM Logic</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Custom API Integration</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldAcc"></i> Tailored Architecture</li>
+                            </ul>
+                        </div>
+                        <button onclick="selectPackage('Custom Web Apps (₹50,000+)')" 
+                                class="mt-8 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white font-semibold text-xs transition-colors border border-slate-700 hover:border-electric">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-12 bg-navy-950 border-b border-slate-800/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-emeraldAcc">Not sure what you need?</span>
+                            <h3 class="text-2xl font-extrabold text-white mt-2">We'll recommend the right package.</h3>
+                            <p class="text-sm text-slate-400 mt-2">Tell us your business type, goals and required features. You don't need to understand web development to buy a website.</p>
+                        </div>
+                        <a href="#contact" class="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-electric hover:bg-blue-500 text-white font-bold text-sm transition">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Get a Recommendation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Portfolio Section -->
+        <section id="demos" class="py-20 bg-navy-900/60 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">Live Industry Templates</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Explore Sample Industry Demos</p>
+                    <p class="mt-3 text-slate-400 text-sm">Click any demo to see interactive site features built for local businesses.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                        <div class="h-40 bg-gradient-to-br from-amber-900/40 via-amber-800/20 to-slate-900 p-6 flex flex-col justify-between relative">
+                            <span class="text-4xl">🍽️️</span>
+                            <span class="absolute top-4 right-4 bg-amber-500/20 text-amber-300 text-xs px-2.5 py-1 rounded-full font-medium">Food & Dining</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white">Cafe & Restaurant Demo</h3>
+                            <p class="text-slate-400 text-xs mt-1">Digital menu, table reservation, and direct WhatsApp order button.</p>
+                            <button onclick="openDemoModal('cafe')" 
+                                    class="mt-5 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700 transition-colors">
+                                <i class="fa-solid fa-eye"></i> View Interactive Preview
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                        <div class="h-40 bg-gradient-to-br from-blue-900/40 via-blue-800/20 to-slate-900 p-6 flex flex-col justify-between relative">
+                            <span class="text-4xl">📚</span>
+                            <span class="absolute top-4 right-4 bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-full font-medium">Education</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white">Coaching Institute Demo</h3>
+                            <p class="text-slate-400 text-xs mt-1">Course listings, student registration, faculty profiles & result showcases.</p>
+                            <button onclick="openDemoModal('coaching')" 
+                                    class="mt-5 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700 transition-colors">
+                                <i class="fa-solid fa-eye"></i> View Interactive Preview
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                        <div class="h-40 bg-gradient-to-br from-pink-900/40 via-pink-800/20 to-slate-900 p-6 flex flex-col justify-between relative">
+                            <span class="text-4xl">💈</span>
+                            <span class="absolute top-4 right-4 bg-pink-500/20 text-pink-300 text-xs px-2.5 py-1 rounded-full font-medium">Beauty & Wellness</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white">Salon & Spa Demo</h3>
+                            <p class="text-slate-400 text-xs mt-1">Service rate card, appointment booking & photo gallery integration.</p>
+                            <button onclick="openDemoModal('salon')" 
+                                    class="mt-5 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700 transition-colors">
+                                <i class="fa-solid fa-eye"></i> View Interactive Preview
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                        <div class="h-40 bg-gradient-to-br from-red-900/40 via-red-800/20 to-slate-900 p-6 flex flex-col justify-between relative">
+                            <span class="text-4xl">🏋️</span>
+                            <span class="absolute top-4 right-4 bg-red-500/20 text-red-300 text-xs px-2.5 py-1 rounded-full font-medium">Fitness</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white">Gym & Fitness Demo</h3>
+                            <p class="text-slate-400 text-xs mt-1">Membership plans, trainer profiles, free trial signup & class schedules.</p>
+                            <button onclick="openDemoModal('gym')" 
+                                    class="mt-5 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700 transition-colors">
+                                <i class="fa-solid fa-eye"></i> View Interactive Preview
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card glass-card-hover rounded-2xl overflow-hidden group sm:col-span-2 lg:col-span-1">
+                        <div class="h-40 bg-gradient-to-br from-emerald-900/40 via-emerald-800/20 to-slate-900 p-6 flex flex-col justify-between relative">
+                            <span class="text-4xl">🏠</span>
+                            <span class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-1 rounded-full font-medium">Real Estate</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white">Real Estate Demo</h3>
+                            <p class="text-slate-400 text-xs mt-1">Property listings, floor plans, virtual tours & direct agent contact.</p>
+                            <button onclick="openDemoModal('realestate')" 
+                                    class="mt-5 w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-electric text-white text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700 transition-colors">
+                                <i class="fa-solid fa-eye"></i> View Interactive Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials -->
+        <section class="py-20 bg-navy-900/60 border-y border-slate-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">Client Experience</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Professional Without the Corporate Drama</p>
+                    <p class="mt-3 text-slate-400 text-sm">Sample testimonial layouts you can replace with verified client feedback as the portfolio grows.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card rounded-2xl p-6 reveal">
+                        <div class="text-emeraldAcc tracking-widest">★★★★★</div>
+                        <p class="mt-4 text-sm text-slate-300 leading-relaxed">“The website finally makes it easy for customers to find our services and message us directly.”</p>
+                        <div class="mt-5 text-xs text-slate-400"><strong class="text-white">Local Business Owner</strong><br>Service Business</div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 reveal">
+                        <div class="text-emeraldAcc tracking-widest">★★★★★</div>
+                        <p class="mt-4 text-sm text-slate-300 leading-relaxed">“Clean design, fast communication and a much better mobile experience than our old site.”</p>
+                        <div class="mt-5 text-xs text-slate-400"><strong class="text-white">Business Owner</strong><br>Retail & Services</div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 reveal">
+                        <div class="text-emeraldAcc tracking-widest">★★★★★</div>
+                        <p class="mt-4 text-sm text-slate-300 leading-relaxed">“The process was simple. We explained what we needed and got a clear website structure without unnecessary complexity.”</p>
+                        <div class="mt-5 text-xs text-slate-400"><strong class="text-white">Founder</strong><br>Local Startup</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 bg-navy-950">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emeraldAcc mb-2">FAQ</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Questions Before You Start</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="faq-item glass-card rounded-2xl reveal">
+                        <button type="button" class="w-full p-5 text-left flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+                            <span class="font-semibold text-white text-sm">How long does a website take?</span>
+                            <i class="fa-solid fa-plus faq-icon text-emeraldAcc"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-sm text-slate-400 leading-relaxed">Typical projects are delivered in around 3–7 working days depending on the package, content readiness and feature requirements. Larger custom projects may take longer.</div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl reveal">
+                        <button type="button" class="w-full p-5 text-left flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+                            <span class="font-semibold text-white text-sm">Do you make the website mobile-friendly?</span>
+                            <i class="fa-solid fa-plus faq-icon text-emeraldAcc"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-sm text-slate-400 leading-relaxed">Yes. Mobile responsiveness is treated as a core requirement, not an optional extra, because many local-business visitors arrive from phones.</div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl reveal">
+                        <button type="button" class="w-full p-5 text-left flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+                            <span class="font-semibold text-white text-sm">Can you add WhatsApp, forms and maps?</span>
+                            <i class="fa-solid fa-plus faq-icon text-emeraldAcc"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-sm text-slate-400 leading-relaxed">Yes. WhatsApp CTAs, inquiry forms, Google Maps, galleries, analytics and other common integrations can be included according to the selected package.</div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl reveal">
+                        <button type="button" class="w-full p-5 text-left flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+                            <span class="font-semibold text-white text-sm">Do I need to provide all the website content?</span>
+                            <i class="fa-solid fa-plus faq-icon text-emeraldAcc"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-sm text-slate-400 leading-relaxed">You can provide your existing text, photos, prices and brand details. If you're starting from scratch, we can help structure the content and page sections around your business.</div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl reveal">
+                        <button type="button" class="w-full p-5 text-left flex items-center justify-between gap-4" onclick="toggleFaq(this)">
+                            <span class="font-semibold text-white text-sm">Are domain and hosting included?</span>
+                            <i class="fa-solid fa-plus faq-icon text-emeraldAcc"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-sm text-slate-400 leading-relaxed">Package inclusions can vary. Domain, hosting, third-party subscriptions and paid services should be confirmed in the final quote before work begins.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Capture Form -->
+        <section id="contact" class="py-20 relative bg-navy-950">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+                    <div class="text-center max-w-xl mx-auto mb-8">
+                        <span class="px-3 py-1 rounded-full bg-emeraldAcc/10 text-emeraldAcc text-xs font-semibold">Instant Quote</span>
+                        <h2 class="text-3xl font-black text-white mt-3">Ready to grow your business online?</h2>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2">Fill out this quick form to receive a customized website preview link directly on WhatsApp.</p>
+                    </div>
+
+                    <form id="leadForm" novalidate onsubmit="handleLeadSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Business Name *</label>
+                                <input type="text" id="busName" required placeholder="e.g. Royal Cafe / Sharma Dental" 
+                                       class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emeraldAcc">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Business Type *</label>
+                                <select id="busType" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emeraldAcc">
+                                    <option value="" disabled selected>Select Category</option>
+                                    <option value="Cafe / Restaurant">Cafe / Restaurant</option>
+                                    <option value="Coaching / Tuition">Coaching Institute</option>
+                                    <option value="Salon / Spa">Salon / Spa</option>
+                                    <option value="Gym / Fitness Center">Gym / Fitness Center</option>
+                                    <option value="Clinic / Hospital">Clinic / Hospital</option>
+                                    <option value="Local Retail Shop">Local Retail Shop</option>
+                                    <option value="Real Estate Agent">Real Estate Agent</option>
+                                    <option value="Other Business">Other Business</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Phone / WhatsApp Number *</label>
+                                <input type="tel" id="busPhone" required placeholder="+91 9876543210" 
+                                       class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emeraldAcc">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Selected Package *</label>
+                                <select id="busPackage" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emeraldAcc">
+                                    <option value="Starter Website (₹4,999 – ₹7,999)">Starter Website (₹4,999 – ₹7,999)</option>
+                                    <option value="Business Website (₹9,999 – ₹17,999)" selected>Business Website (₹9,999 – ₹17,999)</option>
+                                    <option value="Professional Custom (₹20,000 – ₹40,000+)">Professional Custom (₹20,000 – ₹40,000+)</option>
+                                    <option value="E-Commerce Store (₹30,000 – ₹75,000+)">E-Commerce Store (₹30,000 – ₹75,000+)</option>
+                                    <option value="Custom Web Apps (₹50,000+)">Custom Web Apps (₹50,000+)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">What do you want your website to achieve?</label>
+                            <textarea id="busGoal" rows="3" maxlength="500" placeholder="e.g. Get more WhatsApp inquiries, show our services, take bookings..."
+                                      class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emeraldAcc resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-emeraldAcc to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-extrabold text-base transition-all shadow-xl shadow-emeraldAcc/20 flex items-center justify-center gap-2 mt-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            Get Free Preview on WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-gradient-to-br from-electric/20 via-navy-900 to-emeraldAcc/10 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="rounded-3xl border border-electric/20 bg-slate-900/70 p-8 sm:p-12 text-center relative overflow-hidden">
+                <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-64 bg-electric/15 blur-3xl rounded-full"></div>
+                <div class="relative">
+                    <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emeraldAcc"><i class="fa-solid fa-sparkles"></i> Your next customer could be searching right now</span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white mt-4">Give Your Business a Better First Impression.</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto mt-4 text-sm sm:text-base">Get a modern website built around your business, your customers and your next growth target.</p>
+                    <div class="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-emeraldAcc hover:bg-emerald-400 text-slate-950 font-extrabold transition"><i class="fa-brands fa-whatsapp"></i> Start on WhatsApp</a>
+                        <a href="#demos" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold border border-slate-700 transition"><i class="fa-solid fa-eye"></i> See Demos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 border-t border-slate-800 text-slate-400 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-electric flex items-center justify-center text-white font-bold text-sm">
+                            <i class="fa-solid font-mono">&lt;/&gt;</i>
+                        </div>
+                        <span class="text-lg font-bold text-white">Pixel & Code</span>
+                    </div>
+                    <p class="mt-3 text-xs text-slate-400 max-w-sm leading-relaxed">
+                        We design high-converting, ultra-fast websites tailored specifically for local businesses, shops, and clinics across Gujarat and India.
+                    </p>
+                    <div class="mt-4 text-xs text-slate-300 space-y-1">
+                        <p><i class="fa-solid fa-location-dot text-electric mr-2"></i> Based in Gujarat, India</p>
+                        <p><i class="fa-solid fa-phone text-emeraldAcc mr-2"></i> +91 7878224004</p>
+                        <p><i class="fa-solid fa-envelope text-electric mr-2"></i> luxepinvault@gmail.com</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#packages" class="hover:text-white transition-colors">Packages & Pricing</a></li>
+                        <li><a href="#demos" class="hover:text-white transition-colors">Demo Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-3">Direct Support</h4>
+                    <a href="https://wa.me/917878224004" target="_blank" class="inline-flex items-center gap-2 text-xs text-emeraldAcc bg-emeraldAcc/10 hover:bg-emeraldAcc hover:text-slate-950 px-3 py-2 rounded-lg transition-colors font-medium">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>Copyright © <span id="year"></span> Pixel & Code. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Crafted with precision in Gujarat, India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Demo Modal -->
+    <div id="demoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+        <div class="glass-card bg-navy-900 border border-slate-700 w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+            <div class="bg-slate-900 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                    <span id="modalUrl" class="ml-2 text-xs text-slate-400 bg-slate-950 px-3 py-1 rounded-md border border-slate-800 font-mono">https://demo.pixelandcode.in/sample</span>
+                </div>
+                <button aria-label="Close demo preview" onclick="closeDemoModal()" class="text-slate-400 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="modalContent" class="p-6 overflow-y-auto space-y-4 text-xs text-slate-300"></div>
+
+            <div class="bg-slate-900 p-4 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3">
+                <span class="text-xs text-slate-400">Want a custom site like this for your business?</span>
+                <button onclick="applyDemoToForm()" 
+                        class="w-full sm:w-auto py-2.5 px-4 rounded-xl bg-emeraldAcc text-slate-950 font-bold text-xs flex items-center justify-center gap-2 hover:bg-emerald-400 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i> Request This Website Setup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const demoData = {
+            cafe: {
+                title: "🍽️ Cafe & Dining Demo Sample",
+                url: "https://demo.pixelandcode.in/cafe-dining",
+                type: "Cafe / Restaurant",
+                html: `
+                    <div class="space-y-4">
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                            <h3 class="text-lg font-bold text-amber-400 mb-1">The Urban Roastery Cafe</h3>
+                            <p class="text-xs text-slate-400">Fresh Brews, Artisanal Breads & Fast Table Orders</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="font-bold text-xs text-slate-200 uppercase tracking-wider">Visual Menu Highlights</div>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between">
+                                    <span>☕ Hazelnut Latte</span>
+                                    <span class="font-bold text-emeraldAcc">₹180</span>
+                                </div>
+                                <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between">
+                                    <span>🍕 Farmhouse Pizza</span>
+                                    <span class="font-bold text-emeraldAcc">₹340</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-emerald-950/40 border border-emerald-800/50 rounded-lg text-xs text-emerald-300 flex items-center justify-between">
+                            <span>💬 Direct WhatsApp Table Booking Included</span>
+                            <span class="font-bold">Active</span>
+                        </div>
+                    </div>
+                `
+            },
+            coaching: {
+                title: "📚 Coaching & Institute Demo Sample",
+                url: "https://demo.pixelandcode.in/coaching-institute",
+                type: "Coaching / Tuition",
+                html: `
+                    <div class="space-y-4">
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                            <h3 class="text-lg font-bold text-blue-400 mb-1">Apex Science & Commerce Academy</h3>
+                            <p class="text-xs text-slate-400">Classes 9th–12th | JEE & NEET Batch Schedules</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                                <div class="text-base font-bold text-white">98%</div>
+                                <div class="text-[10px] text-slate-400">Pass Rate</div>
+                            </div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                                <div class="text-base font-bold text-white">500+</div>
+                                <div class="text-[10px] text-slate-400">Students</div>
+                            </div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800">
+                                <div class="text-base font-bold text-white">15+</div>
+                                <div class="text-[10px] text-slate-400">Mentors</div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-blue-950/40 border border-blue-800/50 rounded-lg text-xs text-blue-300">
+                            📋 Includes lead capturing forms for free trial classes & student registration.
+                        </div>
+                    </div>
+                `
+            },
+            salon: {
+                title: "💈 Salon & Spa Demo Sample",
+                url: "https://demo.pixelandcode.in/salon-spa",
+                type: "Salon / Spa",
+                html: `
+                    <div class="space-y-4">
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                            <h3 class="text-lg font-bold text-pink-400 mb-1">Glow Studio & Luxury Spa</h3>
+                            <p class="text-xs text-slate-400">Hair, Skin & Bridal Packages</p>
+                        </div>
+                        <div class="space-y-2 text-xs">
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between">
+                                <span>✂️ Premium Haircut & Styling</span>
+                                <span class="font-bold text-emeraldAcc">₹499</span>
+                            </div>
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between">
+                                <span>✨ HydraFacial Treatment</span>
+                                <span class="font-bold text-emeraldAcc">₹1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            gym: {
+                title: "🏋️ Gym & Fitness Center Demo Sample",
+                url: "https://demo.pixelandcode.in/gym-fitness",
+                type: "Gym / Fitness Center",
+                html: `
+                    <div class="space-y-4">
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                            <h3 class="text-lg font-bold text-red-500 mb-1">IronPulse Fitness Club</h3>
+                            <p class="text-xs text-slate-400">Cardio, Crossfit & Personal Coaching</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-slate-950 p-3 rounded border border-slate-800">
+                                <div class="font-bold text-white">Monthly Pass</div>
+                                <div class="text-emeraldAcc font-bold">₹1,200/mo</div>
+                            </div>
+                            <div class="bg-slate-950 p-3 rounded border border-slate-800">
+                                <div class="font-bold text-white">Annual Membership</div>
+                                <div class="text-emeraldAcc font-bold">₹9,999/yr</div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            realestate: {
+                title: "🏠 Real Estate Agent Demo Sample",
+                url: "https://demo.pixelandcode.in/real-estate",
+                type: "Real Estate Agent",
+                html: `
+                    <div class="space-y-4">
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                            <h3 class="text-lg font-bold text-emerald-400 mb-1">Prime Gujarat Realty</h3>
+                            <p class="text-xs text-slate-400">Residential Apartments & Commercial Spaces</p>
+                        </div>
+                        <div class="bg-slate-950 p-3 rounded border border-slate-800 text-xs space-y-1">
+                            <div class="font-bold text-white">🏢 Luxury 3 BHK Flat in Gandhinagar</div>
+                            <div class="text-slate-400">1,850 sq.ft. | Possession Ready</div>
+                            <div class="text-emeraldAcc font-bold mt-1">₹68,00,000</div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        let activeDemoKey = '';
+
+        function selectPackage(packageName) {
+            const packageSelect = document.getElementById('busPackage');
+            if (packageSelect) {
+                packageSelect.value = packageName;
+            }
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function openDemoModal(key) {
+            const data = demoData[key];
+            if (!data) return;
+            activeDemoKey = key;
+            document.getElementById('modalUrl').textContent = data.url;
+            document.getElementById('modalContent').innerHTML = data.html;
+            document.getElementById('demoModal').classList.remove('hidden');
+        }
+
+        function closeDemoModal() {
+            document.getElementById('demoModal').classList.add('hidden');
+        }
+
+        function applyDemoToForm() {
+            const data = demoData[activeDemoKey];
+            if (data) {
+                const busTypeSelect = document.getElementById('busType');
+                if (busTypeSelect) {
+                    busTypeSelect.value = data.type;
+                }
+                closeDemoModal();
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+
+
+        // --- Enhanced interactions ---
+        function toggleFaq(button) {
+            const item = button.closest('.faq-item');
+            document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                if (openItem !== item) openItem.classList.remove('open');
+            });
+            item.classList.toggle('open');
+        }
+
+        function updateScrollProgress() {
+            const scrollTop = window.scrollY;
+            const height = document.documentElement.scrollHeight - window.innerHeight;
+            document.getElementById('scrollProgress').style.width = (height > 0 ? (scrollTop / height) * 100 : 0) + '%';
+        }
+        window.addEventListener('scroll', updateScrollProgress, {passive:true});
+        updateScrollProgress();
+
+        // Reveal sections as they enter the viewport.
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold:0.08});
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Close modal with Escape and by clicking the backdrop.
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeDemoModal();
+        });
+        document.getElementById('demoModal').addEventListener('click', (event) => {
+            if (event.target.id === 'demoModal') closeDemoModal();
+        });
+
+        // Phone number validation + richer WhatsApp message.
+        function normalisePhone(value) {
+            return value.replace(/[^\d+]/g, '').trim();
+        }
+
+        function handleLeadSubmit(event) {
+            event.preventDefault();
+
+            const busName = document.getElementById('busName').value.trim();
+            const busType = document.getElementById('busType').value;
+            const busPhoneRaw = document.getElementById('busPhone').value.trim();
+            const busPackage = document.getElementById('busPackage').value;
+            const busGoal = document.getElementById('busGoal')?.value.trim() || '';
+            const busPhone = normalisePhone(busPhoneRaw);
+
+            if (!busName || !busType || !busPhoneRaw || !busPackage) {
+                showToast('Please complete the required fields.');
+                return;
+            }
+
+            const digits = busPhone.replace(/\D/g, '');
+            if (digits.length < 10 || digits.length > 13) {
+                showToast('Please enter a valid WhatsApp number.');
+                return;
+            }
+
+            const lines = [
+                'Hello Pixel & Code! 👋',
+                '',
+                '*New Website Inquiry*',
+                `• *Business Name:* ${busName}`,
+                `• *Business Type:* ${busType}`,
+                `• *Contact Phone:* ${busPhoneRaw}`,
+                `• *Interested Package:* ${busPackage}`,
+                busGoal ? `• *Main Goal:* ${busGoal}` : '',
+                '',
+                '_Please share a free demo and quote for my business._'
+            ].filter(Boolean);
+
+            const whatsappUrl = `https://wa.me/917878224004?text=${encodeURIComponent(lines.join('\\n'))}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+            showToast('Opening WhatsApp with your inquiry...');
+        }
+
+        function showToast(message) {
+            const existing = document.getElementById('siteToast');
+            if (existing) existing.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'siteToast';
+            toast.className = 'fixed left-1/2 bottom-24 md:bottom-8 -translate-x-1/2 z-[80] bg-slate-800 border border-slate-700 text-white text-sm px-5 py-3 rounded-xl shadow-2xl flex items-center gap-2';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-emeraldAcc"></i><span>${message}</span>`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Make demo buttons announce which demo is being requested.
+        const originalApplyDemoToForm = applyDemoToForm;
+        applyDemoToForm = function() {
+            originalApplyDemoToForm();
+            const data = demoData[activeDemoKey];
+            if (data) {
+                const packageSelect = document.getElementById('busPackage');
+                if (data.type === 'Cafe / Restaurant' || data.type === 'Coaching / Tuition' ||
+                    data.type === 'Salon / Spa' || data.type === 'Gym / Fitness Center' ||
+                    data.type === 'Real Estate Agent') {
+                    packageSelect.value = 'Business Website (₹9,999 – ₹17,999)';
+                }
+                showToast(`${data.type} demo selected.`);
+            }
+        };
+
+    </script>
+</body>
+</html>
